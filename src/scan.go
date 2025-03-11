@@ -53,3 +53,8 @@ func scanGitFolders(folders []string, folder string) []string {
 
 	return folders
 }
+
+// recursiveScanFolder starts the recursive search of git repositories living in the "folder" subtree
+func recursiveScanFolder(folder string) []string {
+	return scanGitFolders(make([]string, 0), folder)
+}
